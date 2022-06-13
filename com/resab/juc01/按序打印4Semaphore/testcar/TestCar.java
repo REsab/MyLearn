@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.concurrent.Semaphore;
 
 /**
- * 业务场景 ：
+ * 业务场景 ：https://zhuanlan.zhihu.com/p/98593407
  * <p>
  * 1、停车场容纳总停车量10。
  * <p>
@@ -24,7 +24,8 @@ public class TestCar {
         //模拟100辆车进入停车场
         for (int i = 0; i < 100; i++) {
 
-            Thread thread = new Thread(new Runnable() {
+
+            Runnable runnable = new Runnable() {
                 public void run() {
                     try {
                         System.out.println("====" + Thread.currentThread().getName() + "来到停车场");
@@ -40,8 +41,9 @@ public class TestCar {
                         e.printStackTrace();
                     }
                 }
-            }, i + "号车");
+            };
 
+            Thread thread = new Thread(runnable, i + "号车");
             thread.start();
         }
 
