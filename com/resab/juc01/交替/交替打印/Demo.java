@@ -8,12 +8,7 @@ public class Demo {
         FooBar foo = new FooBar(22);
 
         new Thread(() -> {
-            Runnable runnable = new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("bar");
-                }
-            };
+            Runnable runnable = () -> System.out.println("bar");
             try {
                 foo.bar(runnable);
             } catch (InterruptedException e) {
@@ -23,11 +18,8 @@ public class Demo {
 
 
         new Thread(() -> {
-            Runnable runnable = new Runnable() {
-                @Override
-                public void run() {
-                    System.out.println("foo");
-                }
+            Runnable runnable = () -> {
+                System.out.println("foo1");
             };
             try {
                 foo.foo(runnable);
