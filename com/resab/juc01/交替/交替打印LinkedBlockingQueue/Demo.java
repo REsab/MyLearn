@@ -1,4 +1,4 @@
-package com.resab.juc01.交替.交替打印;
+package com.resab.juc01.交替.交替打印LinkedBlockingQueue;
 
 
 public class Demo {
