@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印5阻塞队列;
+package com.resab.juc01.按序.按序打印5阻塞队列;
 
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.SynchronousQueue;

@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印4Semaphore.testcar;
+package com.resab.juc01.按序.按序打印4Semaphore.testcar;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;

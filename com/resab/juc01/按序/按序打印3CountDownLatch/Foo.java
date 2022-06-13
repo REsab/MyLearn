@@ -1,12 +1,12 @@
-package com.resab.juc01.按序打印3CountDownLatch;
+package com.resab.juc01.按序.按序打印3CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 
 class Foo {
 
     //CountDownLatch详解 https://www.jianshu.com/p/128476015902
-    private CountDownLatch countDownLatch = new CountDownLatch(1);
-    private CountDownLatch thread3 = new CountDownLatch(1);
+    private CountDownLatch countDownLatch12 = new CountDownLatch(1);
+    private CountDownLatch countDownLatch23 = new CountDownLatch(1);
 
     public Foo() {
 
@@ -16,18 +16,21 @@ class Foo {
 
         // printFirst.run() outputs "first". Do not change or remove this line.
         printFirst.run();
-        countDownLatch.countDown();
+        countDownLatch12.countDown();
     }
 
     public void second(Runnable printSecond) throws InterruptedException {
-        countDownLatch.await();
+        countDownLatch12.await();
         // printSecond.run() outputs "second". Do not change or remove this line.
         printSecond.run();
-        thread3.countDown();
+        countDownLatch23.countDown();
+
+        long count = countDownLatch23.getCount();
+
     }
 
     public void third(Runnable printThird) throws InterruptedException {
-        thread3.await();
+        countDownLatch23.await();
         // printThird.run() outputs "third". Do not change or remove this line.
         printThird.run();
     }

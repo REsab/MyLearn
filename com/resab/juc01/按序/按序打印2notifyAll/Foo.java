@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印2notifyAll;
+package com.resab.juc01.按序.按序打印2notifyAll;
 
 class Foo {
 

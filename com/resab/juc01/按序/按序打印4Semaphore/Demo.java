@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印2notifyAll;
+package com.resab.juc01.按序.按序打印4Semaphore;
 
 public class Demo {
 
@@ -32,6 +32,21 @@ public class Demo {
                 e.printStackTrace();
             }
         }).start();
+        new Thread(() -> {
+            Runnable aaa = new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println("1frist");
+                }
+            };
+            try {
+                foo.first(aaa);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+
         new Thread(() -> {
             Runnable aaa = new Runnable() {
                 @Override
