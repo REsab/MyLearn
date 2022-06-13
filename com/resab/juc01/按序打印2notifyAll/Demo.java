@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印2;
+package com.resab.juc01.按序打印2notifyAll;
 
 public class Demo {
 

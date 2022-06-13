@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印3;
+package com.resab.juc01.按序打印3CountDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 

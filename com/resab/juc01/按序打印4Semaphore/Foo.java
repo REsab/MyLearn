@@ -1,4 +1,4 @@
-package com.resab.juc01.按序打印4;
+package com.resab.juc01.按序打印4Semaphore;
 
 import java.util.concurrent.Semaphore;
 
