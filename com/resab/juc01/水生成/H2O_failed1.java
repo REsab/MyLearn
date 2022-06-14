@@ -1,4 +1,4 @@
-package com.resab.juc01.水生成.按序打印;
+package com.resab.juc01.水生成;
 
 
 import java.util.concurrent.atomic.AtomicInteger;
