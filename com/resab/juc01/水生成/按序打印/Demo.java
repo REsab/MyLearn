@@ -8,7 +8,7 @@ public class Demo {
 
     public static void main(String[] args) {
 
-        boolean tr = validatWater("OHHOHHOHHOHHOHHOHHO");
+        boolean tr = validatWater("OHHOHHHOHOHHHHOHHOHOHOHHOHHOHHOHHOHH");
         System.out.println(tr);
 
 
@@ -46,7 +46,7 @@ public class Demo {
         int length = waters.length();
 
         int numO = 0;
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < length; i = i + 3) {
             String substring = waters.substring(i, i + 3);
 
             if ((substring.charAt(0) == 'O')) {
@@ -63,7 +63,7 @@ public class Demo {
             if (numO != 1) {
                 return false;
             }
-
+            numO = 0;
 
         }
 
