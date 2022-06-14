@@ -5,12 +5,12 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.Semaphore;
 
-class H2O {
+class H2O_v2_cyclebarrier {
     public final CyclicBarrier barrier = new CyclicBarrier(3);
     public final Semaphore h = new Semaphore(2);
     public final Semaphore o = new Semaphore(1);
 
-    public H2O() {
+    public H2O_v2_cyclebarrier() {
 
     }
 
@@ -42,7 +42,6 @@ class H2O {
         //释放信号量
         o.release();
     }
-
 
 
 }

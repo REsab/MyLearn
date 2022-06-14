@@ -3,7 +3,7 @@ package com.resab.juc01.水生成.按序打印;
 public class Validate {
 
     public static void main(String[] args) throws InterruptedException {
-        String s = "HHOHHOHOHOHHHOHHOHHHOOHHHHOHHOOHHOHH";
+        String s = "OHHHOHOHHHHOHHOHHOHHOOHHHOHHOHHOHHOH";
         boolean tr = validatWater(s);
         System.out.println(tr);
     }
