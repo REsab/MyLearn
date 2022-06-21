@@ -38,8 +38,10 @@
 - nginx 负载均衡、动静分离 反向代理
     - [nginx限流](https://blog.csdn.net/lt326030434/article/details/122989403)
 - 漏桶
-- 令牌
+- 令牌 limit_req
 - guava.rateLimte
+max_connection
+- 
 
 ### 服务层
 锁
