@@ -37,17 +37,19 @@
 
 - nginx 负载均衡、动静分离 反向代理
     - [nginx限流](https://blog.csdn.net/lt326030434/article/details/122989403)
-- 漏桶
-- 令牌 limit_req
+- 漏桶 max_connection 限制最大请求容量
+- 令牌 limit_req 限制请求速率
 - guava.rateLimte
-max_connection
-- 
+拦截流量
 
 ### 服务层
-锁
+锁 ： 在高并发场景下，乐观锁的效率不如悲观锁
+redis 缓存： 预热 
+查库存，在缓存查
+队列
 
 ### 数据库
-
+一致性，异步同步，
 
 
 
