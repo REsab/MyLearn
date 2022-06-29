@@ -10,9 +10,9 @@ public class Child extends Father {
 
     }
 
-    public Child(String str1, String str2) {
-        super.setName(str1);
-        this.setName(str2);
+    public Child(String firstName, String name) {
+        super.setName(firstName);
+        this.setName(name);
     }
 
 }
