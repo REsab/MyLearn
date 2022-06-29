@@ -1,6 +1,7 @@
 package com.resab.juc01.交替.交替打印2CyclicBarrier;
 
 import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.Callable;
 import java.util.concurrent.CyclicBarrier;
 
 
@@ -30,6 +31,11 @@ public class FooBar {
         }
     }
 
+    /**
+     * Runnable 无入参 无返回
+     * @param printBar
+     * @throws InterruptedException
+     */
     public void bar(Runnable printBar) throws InterruptedException {
 
         for (int i = 0; i < n; i++) {
@@ -39,6 +45,23 @@ public class FooBar {
                 e.printStackTrace();
             }
             printBar.run();
+            fooExec = true;
+
+        }
+
+
+        /**
+         * callable 无入参，有返回
+         */
+    } public void bar22(Callable printBar) throws Exception {
+
+        for (int i = 0; i < n; i++) {
+            try {
+                cb.await();
+            } catch (BrokenBarrierException e) {
+                e.printStackTrace();
+            }
+            printBar.call();
             fooExec = true;
 
         }
