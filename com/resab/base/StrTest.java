@@ -17,6 +17,9 @@ public class StrTest {
         changeStr(str);
         System.out.println(str);
 
+        str = "hello2";
+        System.out.println(str);
+
 
         int aaa = 2;
         changeStr(aaa);
@@ -29,5 +32,6 @@ public class StrTest {
 
     private static void changeStr(String str) {
         str = "abcccc";
+        System.out.println(str);
     }
 }
