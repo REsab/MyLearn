@@ -2829,9 +2829,57 @@
                 "type": "basic"
               },
               {
+                "description": "command + f = delete word ahead",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
                 "description": "command + , = delete word after",
                 "from": {
                   "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + g = delete word after",
+                "from": {
+                  "key_code": "g",
                   "modifiers": {
                     "mandatory": [
                       "left_command",
