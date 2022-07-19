@@ -467,9 +467,9 @@
                 "type": "basic"
               },
               {
-                "description": "n = delete a word ahead",
+                "description": "b = delete a word ahead",
                 "from": {
-                  "key_code": "n",
+                  "key_code": "b",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
@@ -490,9 +490,9 @@
                 "type": "basic"
               },
               {
-                "description": "m = delete a char ahead",
+                "description": "n = delete a char ahead",
                 "from": {
-                  "key_code": "m",
+                  "key_code": "n",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
@@ -530,9 +530,9 @@
                 "type": "basic"
               },
               {
-                "description": ", = delete a char after",
+                "description": "m = delete a char after",
                 "from": {
-                  "key_code": "comma",
+                  "key_code": "m",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
@@ -565,6 +565,29 @@
                 "to": [
                   {
                     "key_code": "delete_forward"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": ", = delete a word after",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward",
+                    "modifiers": [
+                      "left_option"
+                    ]
                   }
                 ],
                 "type": "basic"
