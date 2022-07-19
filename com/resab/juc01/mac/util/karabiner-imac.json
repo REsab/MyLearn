@@ -93,38 +93,12 @@
                   }
                 ],
                 "type": "basic"
-              },
-              {
-                "description": "command + spacebar = emoji",
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": {
-                    "mandatory": [
-                      "left_command",
-                      "right_command",
-                      "right_control",
-                      "right_shift",
-                      "right_option"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "left_control",
-                      "left_command"
-                    ]
-                  }
-                ],
-                "type": "basic"
               }
             ]
           },
           {
             "description": "Hyper Navigation",
             "manipulators": [
-
               {
                 "description": " h = left",
                 "from": {
