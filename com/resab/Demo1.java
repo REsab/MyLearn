@@ -1,4 +1,4 @@
-package com.resab.juc01;
+package com.resab;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
