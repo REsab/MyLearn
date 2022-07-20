@@ -100,7 +100,7 @@
             "description": "Hyper Navigation",
             "manipulators": [
               {
-                "description": " enter = left",
+                "description": " enter = left_shift + enter",
                 "from": {
                   "key_code": "return_or_enter",
                   "modifiers": {
@@ -114,7 +114,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "enter",
+                    "key_code": "return_or_enter",
                     "modifiers": [
                       "left_shift"
                     ]
