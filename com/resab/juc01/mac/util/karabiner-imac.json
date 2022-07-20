@@ -100,6 +100,26 @@
             "description": "Hyper Navigation",
             "manipulators": [
               {
+                "description": " enter = left",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
                 "description": " h = left",
                 "from": {
                   "key_code": "h",
