@@ -114,7 +114,10 @@
                 },
                 "to": [
                   {
-                    "key_code": "left_arrow"
+                    "key_code": "enter",
+                    "modifiers": [
+                      "left_shift"
+                    ]
                   }
                 ],
                 "type": "basic"
