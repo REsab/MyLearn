@@ -1,0 +1,83 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"linux 安装vim-plug: curl -fLo ~/.vim/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+"需要插件easymotion"
+"":set keep-english-in-normal enable auto-switch feature
+"":set keep-english-in-normal-and-restore-in-insert restore input method when return insert mode.
+"":hset nokeep-english-in-normal-and-restore-in-insert keep auto-switch feature, but doesn't restore input method when return
+"insert mode
+"":set nokeep-english-in-normal disable auto-switch feature
+"You can also add `set keep-english-in-normal[-and-restore-in-insert]`
+"to the `~/.ideavimrc` file and restart IDE to enable the feature.
+
+" 正常模式下
+nnoremap H ^
+nnoremap L $
+nnoremap J 6j
+nnoremap K 6k
+
+
+
+" Insert模式下
+inoremap jj <esc>
+inoremap kk <esc>
+
+
+" inoremap <c-d> <del>
+
+" 定义全局leader键
+let mapleader="\<space>"
+
+" 搜索时忽略大小写
+set ignorecase
+" 高亮搜索内容
+set hlsearch
+" 搜索时，随输入动态增量显示搜索结果
+set incsearch
+
+" Ex增强模式
+set wildmenu
+
+" 显示行号
+set number
+" 显示相对行号
+set relativenumber
+
+" 清除高亮搜索
+nnoremap <leader>c :let @/=''<cr>
+
+" 快速保存
+
+
+nnoremap <c-r> :action $Redo<cr>
+nnoremap <leader>r :action RenameElement<cr>
+nnoremap <leader>cfn :action CopyFilename<cr>
+nnoremap <leader>gd :action GotoDeclaration<cr>
+
