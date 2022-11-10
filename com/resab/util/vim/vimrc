@@ -12,6 +12,9 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
+set ideajoin
+"set ideaput
+set ideamarks
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -40,8 +43,8 @@ map Q gq
 " 正常模式下
 nnoremap H ^
 nnoremap L $
-nnoremap J 6j
-nnoremap K 6k
+"nnoremap J 6j
+"nnoremap K 6k
 
 
 
