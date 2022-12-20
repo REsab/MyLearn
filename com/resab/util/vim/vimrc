@@ -37,6 +37,10 @@ map Q gq
 "You can also add `set keep-english-in-normal[-and-restore-in-insert]`
 "to the `~/.ideavimrc` file and restart IDE to enable the feature.
 
+set keep-english-in-normal-and-restore-in-insert
+
+
+
 " 正常模式下
 nnoremap H ^
 nnoremap L $
