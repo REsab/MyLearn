@@ -85,3 +85,10 @@ nnoremap <leader>r :action RenameElement<cr>
 nnoremap <leader>cfn :action CopyFilename<cr>
 nnoremap <leader>gd :action GotoDeclaration<cr>
 
+
+
+
+" mac 按键长按 连续输入 jjjjj
+" resab@zyl03 ~ %
+" resab@zyl03 ~ % defaults write -g ApplePressAndHoldEnabled -bool false
+
