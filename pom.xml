@@ -7,8 +7,8 @@
     <groupId>cn.tycoding</groupId>
     <artifactId>monitor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>monitor</name>
-    <description>JVM-Monitor</description>
+    <name>myLearn</name>
+    <description>myLearn</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -24,6 +24,32 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>30.1.1-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-core</artifactId>
+            <version>3.2.20.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.caffinitas.ohc</groupId>
+            <artifactId>ohc-core</artifactId>
+            <version>0.7.4</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.13.0</version>
         </dependency>
 
     </dependencies>

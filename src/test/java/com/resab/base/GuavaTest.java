@@ -12,16 +12,28 @@ public class GuavaTest {
 	public static void main(String[] args) throws IOException {
 
 		test1();
+		test2();
 	}
 
 	private static void test1() {
 		Table<String, String, Integer> table = HashBasedTable.create();
 // 存放元素
-		table.put("Hydra", "Jan", 20);
-		table.put("Hydra", "Feb", 28);
+		table.put("1", "1", 1);
+		table.put("1", "2", 1);
+		table.put("2", "1", 1);
+		table.put("2", "2", 1);
 
-		table.put("Trunks", "Jan", 28);
-		table.put("Trunks", "Feb", 16);
+		// 取出元素
+		Integer dayCount = table.get("Hydra", "Feb");
+	}
+
+	private static void test2() {
+		Table<String, String, Integer> table = HashBasedTable.create();
+		// 存放元素
+		table.put("1", "1", 1);
+		table.put("1", "2", 1);
+		table.put("2", "1", 1);
+		table.put("2", "2", 1);
 
 // 取出元素
 		Integer dayCount = table.get("Hydra", "Feb");
