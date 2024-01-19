@@ -1,3 +1,6 @@
 .idea
 ./out
 /out/test/MyLearn/
+/target/classes/
+/MyLearn.iml
+/out/production/MyLearn/
