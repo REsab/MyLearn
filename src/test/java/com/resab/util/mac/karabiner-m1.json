@@ -31,10 +31,9 @@
                 },
                 "to": [
                   {
-                    "key_code": "right_shift",
+                    "key_code": "right_control",
                     "modifiers": [
                       "right_command",
-                      "right_control",
                       "right_option"
                     ]
                   }
@@ -54,7 +53,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ],
                     "optional": [
@@ -80,7 +78,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -89,7 +86,7 @@
                   {
                     "key_code": "spacebar",
                     "modifiers": [
-                      "right_option"
+                      "left_control"
                     ]
                   }
                 ],
@@ -108,7 +105,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -131,7 +127,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -151,7 +146,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -171,7 +165,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -191,7 +184,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -211,7 +203,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -231,7 +222,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -251,7 +241,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -271,7 +260,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -297,7 +285,6 @@
                       "left_option",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -321,7 +308,6 @@
                       "left_option",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -345,7 +331,6 @@
                       "left_command",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -373,7 +358,6 @@
                       "left_command",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -397,7 +381,6 @@
                       "left_command",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -421,7 +404,6 @@
                       "left_command",
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -448,7 +430,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -471,7 +452,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -491,7 +471,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -511,7 +490,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -531,7 +509,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
@@ -551,7 +528,6 @@
                     "mandatory": [
                       "right_command",
                       "right_control",
-                      "right_shift",
                       "right_option"
                     ]
                   }
