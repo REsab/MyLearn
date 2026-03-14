@@ -1,0 +1,1150 @@
+{
+  "global": {
+    "check_for_updates_on_startup": false
+  },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Backslash: Enter if alone, Backslash if held (Strict)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "backslash",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "parameters": {
+                  "basic.to_if_alone_timeout_milliseconds": 300,
+                  "basic.to_if_held_down_threshold_milliseconds": 300
+                },
+                "to_if_alone": [
+                  {
+                    "key_code": "return_or_enter"
+                  }
+                ],
+                "to_if_held_down": [
+                  {
+                    "key_code": "backslash"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "CapsLock to Hyper",
+            "manipulators": [
+              {
+                "description": "capslock = esc(click) | hyper(hold)",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_control",
+                    "modifiers": [
+                      "right_command",
+                      "right_option"
+                    ]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "escape = capslock switch",
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ],
+                    "optional": [
+                      "caps_lock"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "caps_lock",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "spacebar = language switch",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper Navigation",
+            "manipulators": [
+              {
+                "description": " enter = left_shift + enter",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "return_or_enter",
+                    "modifiers": [
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " h = left",
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " j = down",
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "down_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " k = up",
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "up_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " l = right",
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " u = page_up",
+                "from": {
+                  "key_code": "u",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_up"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " i = home",
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "home"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " o = end",
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "end"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": " p = page_down",
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Hyper Deletion",
+            "manipulators": [
+              {
+                "description": "option + n = delete whole line",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "option + . = delete whole line",
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + n = delete whole line",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_arrow",
+                    "modifiers": [
+                      "left_shift",
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + m = delete word ahead",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + , = delete word after",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "command + . = delete whole line",
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "left_shift",
+                      "left_command"
+                    ]
+                  },
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "n = delete a word ahead",
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "m = delete a char ahead",
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "f = delete a char ahead",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": ", = delete a char after",
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "g = delete a char after",
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": ". = delete a word after",
+                "from": {
+                  "key_code": "period",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_forward",
+                    "modifiers": [
+                      "left_option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "shift+fn toggles fn key  mode between 'fullControlStrip' and 'functionKeys'",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "fn",
+                  "modifiers": {
+                    "mandatory": [
+                      "shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "if [[ $(defaults read .GlobalPreferences com.apple.keyboard.fnState) == '1' ]]; then  defaults write .GlobalPreferences com.apple.keyboard.fnState -bool no; else defaults write .GlobalPreferences com.apple.keyboard.fnState -bool yes; fi && pkill ControlStrip"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Use F12 to open Dev Tools (all browsers)",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^org\\.mozilla\\.firefox$",
+                      "^org\\.mozilla\\.firefoxdeveloperedition$",
+                      "^org\\.mozilla\\.nightly$",
+                      "^com\\.microsoft\\.Edge",
+                      "^com\\.microsoft\\.edgemac",
+                      "^com\\.google\\.Chrome$",
+                      "^com\\.brave\\.Browser$",
+                      "^com\\.apple\\.Safari$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f12"
+                },
+                "to": [
+                  {
+                    "key_code": "i",
+                    "modifiers": [
+                      "option",
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Use LEFT OPTION + s to search copied word in Dictionary.app",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "shell_command": "open \"dict://`pbpaste`\""
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "(idea ) Function keys work as fn keys",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f1",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f1"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f2",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f2"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f3",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f3"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f4",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f4"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f5",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f5"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f6",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f6"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f7",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f7"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f8",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f8"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f9",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f9"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f10",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f10"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f11",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f11"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.jetbrains"
+                    ],
+                    "file_paths": [
+                      "ck2\\.app",
+                      "eu4\\.app"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f12",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f12"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Use left shift to Change to/from English input. （系统设置： 键盘设置》 使用大写键切换ABC .）",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "caps_lock"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "fn_function_keys": [
+        {
+          "from": {
+            "key_code": "f1"
+          },
+          "to": [
+            {
+              "key_code": "f1"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f2"
+          },
+          "to": [
+            {
+              "key_code": "f2"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f3"
+          },
+          "to": [
+            {
+              "key_code": "f3"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f4"
+          },
+          "to": [
+            {
+              "key_code": "f4"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f6"
+          },
+          "to": [
+            {
+              "key_code": "f6"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f7"
+          },
+          "to": [
+            {
+              "key_code": "f7"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f8"
+          },
+          "to": [
+            {
+              "key_code": "f8"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f9"
+          },
+          "to": [
+            {
+              "key_code": "f9"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f10"
+          },
+          "to": [
+            {
+              "key_code": "f10"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f11"
+          },
+          "to": [
+            {
+              "key_code": "f11"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "f12"
+          },
+          "to": [
+            {
+              "key_code": "f12"
+            }
+          ]
+        }
+      ],
+      "name": "profile-iMac",
+      "selected": true,
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "non_us_backslash"
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "grave_accent_and_tilde"
+          },
+          "to": [
+            {
+              "key_code": "left_shift"
+            }
+          ]
+        }
+      ],
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
+}
